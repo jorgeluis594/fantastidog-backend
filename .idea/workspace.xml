@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1e4cbc68-7b1d-4f89-a51f-3381b83f7376" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1hZjYcKGe2t7tGpyfc2qfM8X2yQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.linters.configure.manually.selectedeslint" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/node_modules/eslint-config-airbnb-base/index.js" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="$USER_HOME$/.nodenv/versions/12.17.0/bin/node" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="$PROJECT_DIR$/node_modules/eslint" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.eslint" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1e4cbc68-7b1d-4f89-a51f-3381b83f7376" name="Default Changelist" comment="" />
+      <created>1600225568711</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600225568711</updated>
+      <workItem from="1600225571812" duration="138000" />
+      <workItem from="1600225756956" duration="563000" />
+      <workItem from="1600226361211" duration="934000" />
+      <workItem from="1600227340294" duration="952000" />
+      <workItem from="1600228486415" duration="69000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="0" y="24" width="1280" height="696" key="#ESLint" timestamp="1600227920744">
+      <screen x="0" y="24" width="1280" height="696" />
+    </state>
+    <state x="0" y="24" width="1280" height="696" key="#ESLint/0.24.1280.696@0.24.1280.696" timestamp="1600227920744" />
+    <state x="374" y="120" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600227970847">
+      <screen x="0" y="24" width="1280" height="696" />
+    </state>
+    <state x="374" y="120" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.24.1280.696@0.24.1280.696" timestamp="1600227970847" />
+    <state x="206" y="146" key="FileChooserDialogImpl" timestamp="1600227592330">
+      <screen x="0" y="24" width="1280" height="696" />
+    </state>
+    <state x="206" y="146" key="FileChooserDialogImpl/0.24.1280.696@0.24.1280.696" timestamp="1600227592330" />
+    <state x="137" y="24" width="1005" height="696" key="SettingsEditor" timestamp="1600227596317">
+      <screen x="0" y="24" width="1280" height="696" />
+    </state>
+    <state x="137" y="24" width="1005" height="696" key="SettingsEditor/0.24.1280.696@0.24.1280.696" timestamp="1600227596317" />
+    <state x="454" y="63" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600227032089">
+      <screen x="0" y="24" width="1280" height="696" />
+    </state>
+    <state x="454" y="63" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.24.1280.696@0.24.1280.696" timestamp="1600227032089" />
+    <state x="360" y="182" key="jetbrains.nodejs.interpreters-dialog" timestamp="1600225988951">
+      <screen x="0" y="24" width="1280" height="696" />
+    </state>
+    <state x="360" y="182" key="jetbrains.nodejs.interpreters-dialog/0.24.1280.696@0.24.1280.696" timestamp="1600225988951" />
+  </component>
+</project>

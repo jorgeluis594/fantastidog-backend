@@ -6,8 +6,8 @@ const err = require('../../../utils/errors');
 const TABLE = 'auth';
 
 module.exports = (injectedStore) => {
-  function find(query) {
-    return injectedStore.query(TABLE, query);
+  async function find(query) {
+    return injectedStore.query(TABLE, query)[0];
   }
 
   async function login(username, password) {
@@ -22,17 +22,20 @@ module.exports = (injectedStore) => {
     throw err('Invalid information', 401);
   }
 
-  async function upsert(data) {
-    const { password, ...authData } = data;
+  async function create(data) {
+    const cryptPassword = await bcrypt.hash(data.password, 5);
+    await injectedStore.insert(TABLE, { ...data, password: cryptPassword });
+  }
 
-    if (data.password) authData.password = await bcrypt.hash(password, 5);
-
-    return injectedStore.upsert(TABLE, authData);
+  async function update(id, data) {
+    const cryptPassword = await bcrypt.hash(data.password, 5);
+    await injectedStore.update(TABLE, id, { ...data, password: cryptPassword });
   }
 
   return {
-    upsert,
     login,
     find,
+    create,
+    update,
   };
 };

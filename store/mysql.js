@@ -73,20 +73,11 @@ function update(table, id, data) {
   });
 }
 
-function upsert(table, data) {
-  if (data && data.id) {
-    return update(table, data);
-  }
-  // eslint-disable-next-line no-param-reassign
-  delete data.id;
-  return insert(table, data);
-}
-
 function query(table, filters) {
   return new Promise((resolve, reject) => {
     connection.query(`SELECT * FROM ${table} WHERE ?`, filters, (err, result) => {
       if (err) return reject(err);
-      return resolve(rowDataToObject(result)[0]);
+      return resolve(rowDataToObject(result));
     });
   });
 }
@@ -94,7 +85,6 @@ function query(table, filters) {
 module.exports = {
   list,
   get,
-  upsert,
   query,
   insert,
   update,

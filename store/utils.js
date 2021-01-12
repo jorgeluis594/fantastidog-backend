@@ -3,7 +3,6 @@ function formatMysqlValues(data) {
   // eslint-disable-next-line no-unused-expressions
   Array.isArray(data) ? copiedData.push(...data) : copiedData.push(data);
   const keys = Object.keys(copiedData[0]);
-  // eslint-disable-next-line no-use-before-define
   return [formatKeys(keys), formatValues(keys, copiedData)];
 }
 

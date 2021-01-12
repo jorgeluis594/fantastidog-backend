@@ -1,45 +1,37 @@
 /* eslint-disable no-use-before-define */
 const err = require('../../../utils/errors');
 
-const TABLE = 'Product';
-
-function validAttributes(attributes) {
-  const isStringsArray = () => !attributes.some((attribute) => typeof attribute !== 'string');
-  return Array.isArray(attributes) && isStringsArray();
+function validAttributes(product) {
+  const isStringsArray = () => !product.attributes.some((attribute) => typeof attribute !== 'string');
+  return Array.isArray(product.attributes) && isStringsArray();
 }
 
 module.exports = (injectedStore) => {
   function list() {
-    return injectedStore.list(TABLE);
+    return injectedStore.list();
   }
 
-  function get(id) {
-    return injectedStore.get(TABLE, id);
+  async function get(id) {
+    const product = await injectedStore.get(id);
+    if (!product) throw err('Product not found', 404);
+    return product;
   }
 
-  async function upsert(data) {
-    const { attributes, ...productData } = data;
-    if (validAttributes(attributes)) {
-      const product = await injectedStore.upsert(TABLE, productData);
-      await signUpAttributes(product, attributes);
-      return product;
+  async function create(data) {
+    if (!validAttributes(data)) {
+      throw err('Invalid data', 400);
     }
-    throw err('Invalid data', 400);
+    return injectedStore.create(data);
   }
 
-  function signUpAttributes(product, attributes) {
-    const setData = attributes.map((attribute) => (
-      {
-        product_id: product.id,
-        name: attribute,
-      }
-    ));
-    return injectedStore.upsert(`${TABLE}_Attribute`, setData);
+  function update(id, data) {
+    return injectedStore.update(id, data);
   }
 
   return {
-    upsert,
+    create,
     list,
     get,
+    update,
   };
 };

@@ -9,8 +9,8 @@ const router = express.Router();
 
 router.get('/', list);
 router.get('/:id', get);
-router.post('/', upsert);
-router.put('/:id', secure('update'), upsert);
+router.post('/', create);
+router.put('/:id', secure('update'), update);
 
 function list(req, res, next) {
   Controller.list()
@@ -28,9 +28,16 @@ function get(req, res, next) {
     .catch(next);
 }
 
-function upsert(req, res, next) {
-  if (req.params.id) req.body.id = req.params.id;
-  Controller.upsert(req.body)
+function create(req, res, next) {
+  Controller.create(req.body)
+    .then((user) => {
+      response.success(req, res, user, 201);
+    })
+    .catch(next);
+}
+
+function update(req, res, next) {
+  Controller.update(req.params.id, req.body)
     .then((user) => {
       response.success(req, res, user, 201);
     })
